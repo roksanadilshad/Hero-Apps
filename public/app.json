@@ -1,0 +1,294 @@
+[
+  
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/5968/5968520.png",
+    "title": "Adobe Photoshop",
+    "companyName": "Adobe Inc.",
+    "id": 6,
+    "description": "Edit photos and create stunning digital art.",
+    "size": 210,
+    "reviews": 15,
+    "ratingAvg": 4.5,
+    "downloads": 100,
+    "ratings": [
+      { "name": "1 star", "count": 60000 },
+      { "name": "2 star", "count": 80000 },
+      { "name": "3 star", "count": 150000 },
+      { "name": "4 star", "count": 250000 },
+      { "name": "5 star", "count": 1150000 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/5968/5968764.png",
+    "title": "Facebook",
+    "companyName": "Meta Platforms Inc.",
+    "id": 8,
+    "description": "Connect with friends, share photos, and join communities.",
+    "size": 110,
+    "reviews": 14,
+    "ratingAvg": 4.3,
+    "downloads": 300,
+    "ratings": [
+      { "name": "1 star", "count": 300000 },
+      { "name": "2 star", "count": 400000 },
+      { "name": "3 star", "count": 700000 },
+      { "name": "4 star", "count": 1200000 },
+      { "name": "5 star", "count": 11400000 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/5968/5968534.png",
+    "title": "Gmail",
+    "companyName": "Google LLC",
+    "id": 12,
+    "description": "Fast, organized email with powerful spam protection.",
+    "size": 55,
+    "reviews": 16,
+    "ratingAvg": 4.7,
+    "downloads": 500,
+    "ratings": [
+      { "name": "1 star", "count": 120000 },
+      { "name": "2 star", "count": 150000 },
+      { "name": "3 star", "count": 300000 },
+      { "name": "4 star", "count": 1000000 },
+      { "name": "5 star", "count": 14500000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/da/Google_Drive_logo.png",
+    "title": "Google Drive",
+    "companyName": "Google LLC",
+    "id": 9,
+    "description": "Securely store, access, and share your files anywhere.",
+    "size": 60,
+    "reviews": 80,
+    "ratingAvg": 4.6,
+    "downloads": 200,
+    "ratings": [
+      { "name": "1 star", "count": 90000 },
+      { "name": "2 star", "count": 120000 },
+      { "name": "3 star", "count": 250000 },
+      { "name": "4 star", "count": 600000 },
+      { "name": "5 star", "count": 7000000 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/174/174855.png",
+    "title": "Instagram",
+    "companyName": "Meta Platforms Inc.",
+    "id": 3,
+    "description": "Share photos, videos, and connect with friends around the world.",
+    "size": 90,
+    "reviews": 12,
+    "ratingAvg": 4.6,
+    "downloads": 200,
+    "ratings": [
+      { "name": "1 star", "count": 150000 },
+      { "name": "2 star", "count": 200000 },
+      { "name": "3 star", "count": 400000 },
+      { "name": "4 star", "count": 1000000 },
+      { "name": "5 star", "count": 10000000 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/174/174857.png",
+    "title": "LinkedIn",
+    "companyName": "LinkedIn Corporation",
+    "id": 15,
+    "description": "Connect with professionals and grow your career network.",
+    "size": 95,
+    "reviews": 40,
+    "ratingAvg": 4.3,
+    "downloads": 100,
+    "ratings": [
+      { "name": "1 star", "count": 70000 },
+      { "name": "2 star", "count": 100000 },
+      { "name": "3 star", "count": 250000 },
+      { "name": "4 star", "count": 500000 },
+      { "name": "5 star", "count": 3100000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/dJsmLzck/Microsoft-Logo-PNG-Photo.png",
+    "title": "Microsoft Word",
+    "companyName": "Microsoft Corporation",
+    "id": 2,
+    "description": "Create, edit, and collaborate on documents from anywhere.",
+    "size": 120,
+    "reviews": 72,
+    "ratingAvg": 4.5,
+    "downloads": 500,
+    "ratings": [
+      { "name": "1 star", "count": 80000 },
+      { "name": "2 star", "count": 120000 },
+      { "name": "3 star", "count": 350000 },
+      { "name": "4 star", "count": 900000 },
+      { "name": "5 star", "count": 5800000 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/732/732228.png",
+    "title": "Netflix",
+    "companyName": "Netflix Inc.",
+    "id": 10,
+    "description": "Watch your favorite TV shows, movies, and documentaries.",
+    "size": 180,
+    "reviews": 10,
+    "ratingAvg": 4.8,
+    "downloads": 100,
+    "ratings": [
+      { "name": "1 star", "count": 70000 },
+      { "name": "2 star", "count": 100000 },
+      { "name": "3 star", "count": 200000 },
+      { "name": "4 star", "count": 800000 },
+      { "name": "5 star", "count": 8900000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png",
+    "title": "Pinterest",
+    "companyName": "Pinterest Inc.",
+    "id": 13,
+    "description": "Discover new ideas, recipes, and DIY inspiration.",
+    "size": 70,
+    "reviews": 50,
+    "ratingAvg": 4.6,
+    "downloads": 100,
+    "ratings": [
+      { "name": "1 star", "count": 60000 },
+      { "name": "2 star", "count": 80000 },
+      { "name": "3 star", "count": 200000 },
+      { "name": "4 star", "count": 400000 },
+      { "name": "5 star", "count": 4300000 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/3670/3670145.png",
+    "title": "Spotify",
+    "companyName": "Spotify AB",
+    "id": 1,
+    "description": "Stream millions of songs and podcasts for free.",
+    "size": 45,
+    "reviews": 9500000,
+    "ratingAvg": 4.7,
+    "downloads": 1000,
+    "ratings": [
+      { "name": "1 star", "count": 50000 },
+      { "name": "2 star", "count": 70000 },
+      { "name": "3 star", "count": 150000 },
+      { "name": "4 star", "count": 600000 },
+      { "name": "5 star", "count": 8000000 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/3046/3046122.png",
+    "title": "TikTok",
+    "companyName": "ByteDance Ltd.",
+    "id": 14,
+    "description": "Create and discover short videos with trending sounds.",
+    "size": 85,
+    "reviews": 13,
+    "ratingAvg": 4.4,
+    "downloads": 300,
+    "ratings": [
+      { "name": "1 star", "count": 200000 },
+      { "name": "2 star", "count": 250000 },
+      { "name": "3 star", "count": 500000 },
+      { "name": "4 star", "count": 1000000 },
+      { "name": "5 star", "count": 11000000 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/733/733579.png",
+    "title": "Twitter X",
+    "companyName": "X Corp.",
+    "id": 4,
+    "description": "Join the conversation and stay informed with trending topics.",
+    "size": 78,
+    "reviews": 54,
+    "ratingAvg": 4.2,
+    "downloads": 800,
+    "ratings": [
+      { "name": "1 star", "count": 200000 },
+      { "name": "2 star", "count": 250000 },
+      { "name": "3 star", "count": 500000 },
+      { "name": "4 star", "count": 700000 },
+      { "name": "5 star", "count": 3750000 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/1384/1384060.png",
+    "title": "YouTube",
+    "companyName": "Google LLC",
+    "id": 5,
+    "description": "Watch, upload, and share videos from creators worldwide.",
+    "size": 95,
+    "reviews": 18,
+    "ratingAvg": 4.8,
+    "downloads": 500,
+    "ratings": [
+      { "name": "1 star", "count": 200000 },
+      { "name": "2 star", "count": 250000 },
+      { "name": "3 star", "count": 700000 },
+      { "name": "4 star", "count": 1000000 },
+      { "name": "5 star", "count": 16000000 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/prkj0SqP/zoom-communications-logo-3aa8.png",
+    "title": "Zoom",
+    "companyName": "Zoom Video Communications",
+    "id": 7,
+    "description": "High-quality video meetings and messaging for teams.",
+    "size": 70,
+    "reviews": 63,
+    "ratingAvg": 4.4,
+    "downloads": 100,
+    "ratings": [
+      { "name": "1 star", "count": 100000 },
+      { "name": "2 star", "count": 150000 },
+      { "name": "3 star", "count": 400000 },
+      { "name": "4 star", "count": 1000000 },
+      { "name": "5 star", "count": 4650000 }
+    ]
+  },
+  
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg",
+    "title": "WhatsApp",
+    "companyName": "WhatsApp LLC (Meta Platforms)",
+    "id": 104,
+    "description": "Free messaging and calling app that lets you stay connected with friends and family across the world.",
+    "size": 95,
+    "reviews": 110,
+    "ratingAvg": 4.7,
+    "downloads": 500,
+    "ratings": [
+      { "name": "1 star", "count": 450000 },
+      { "name": "2 star", "count": 700000 },
+      { "name": "3 star", "count": 1500000 },
+      { "name": "4 star", "count": 4200000 },
+      { "name": "5 star", "count": 25000000 }
+    ]
+  },
+  {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%282011%29.png",
+    "title": "Google Chrome",
+    "companyName": "Google LLC",
+    "id": 105,
+    "description": "Fast, secure, and easy-to-use web browser built for modern browsing and productivity.",
+    "size": 130,
+    "reviews": 95,
+    "ratingAvg": 4.6,
+    "downloads": 100,
+    "ratings": [
+      { "name": "1 star", "count": 550000 },
+      { "name": "2 star", "count": 800000 },
+      { "name": "3 star", "count": 1800000 },
+      { "name": "4 star", "count": 5000000 },
+      { "name": "5 star", "count": 30000000 }
+    ]
+  }
+
+
+]

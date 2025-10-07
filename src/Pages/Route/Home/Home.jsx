@@ -1,6 +1,10 @@
 import React from 'react';
+import { useLoaderData } from 'react-router';
+import Apps from '../../Apps/Apps';
 
 const Home = () => {
+    const apps = useLoaderData();
+    //console.log(apps);
     
     
     return (
@@ -26,7 +30,7 @@ const Home = () => {
 </div>
 <div className=' bg-gradient-to-r 
       from-[#632EE3]
-       to-[#9F62F2] py-6 px-40 w-full text-white'>
+       to-[#9F62F2] py-6 px-40 w-full text-white mb-20'>
   <h2 className='font-bold text-5xl'>Trusted by Millions, Built for You</h2>
   <div className='flex justify-evenly items-center'>
     <div className='text-center py-10'>
@@ -46,6 +50,12 @@ const Home = () => {
   </div>
   </div>
 </div>
+
+       <div>
+             <h2 className='font-bold text-5xl text-[#001931]'>Trending Apps</h2>
+              <p className='text-xl/[32px] text-[#627382] m-4'>Explore All Trending Apps on the Market developed by us</p>
+              <Apps apps={apps}></Apps>
+      </div>
        </div>
     );
 };
