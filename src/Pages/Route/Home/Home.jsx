@@ -6,7 +6,7 @@ const Home = () => {
     const apps = useLoaderData();
     //console.log(apps);
     
-    
+    const diusplayApps = apps.slice(0, 6)
     return (
         <div className='text-center flex justify-center items-center flex-col'>
            <h1 className='font-bold text-7xl/[84px]'>We Build <br />
@@ -54,7 +54,7 @@ const Home = () => {
        <div>
              <h2 className='font-bold text-5xl text-[#001931]'>Trending Apps</h2>
               <p className='text-xl/[32px] text-[#627382] m-4'>Explore All Trending Apps on the Market developed by us</p>
-              <Apps apps={apps}></Apps>
+              <Apps apps={diusplayApps}></Apps>
       </div>
        </div>
     );

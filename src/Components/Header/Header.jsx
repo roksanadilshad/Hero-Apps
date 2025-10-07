@@ -5,7 +5,7 @@ import { NavLink } from 'react-router';
 const Header = () => {
     return (
         <div>
-            <div className="navbar bg-base-100 shadow-sm mb-20">
+            <div className="navbar bg-base-100 shadow-sm mb-20 px-10">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -19,7 +19,7 @@ const Header = () => {
      <NavLink to="/installation" className='font-semibold text-[16px]/[152%] mr-8'>Installation</NavLink>
       </ul>
     </div>
-    <a className="btn btn-ghost 
+    <a href='/' className="btn btn-ghost 
     font-bold 
     bg-clip-text
      text-transparent
