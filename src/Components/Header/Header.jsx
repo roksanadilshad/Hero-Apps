@@ -19,7 +19,13 @@ const Header = () => {
      <NavLink to="/installation" className='font-semibold text-[16px]/[152%] mr-8'>Installation</NavLink>
       </ul>
     </div>
-    <a className="btn btn-ghost font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#632EE3] to-[#9F62F2]"><img className='w-[30px] h-[30px]' src="/src/assets/logo.png" alt="" />HERO.IO</a>
+    <a className="btn btn-ghost 
+    font-bold 
+    bg-clip-text
+     text-transparent
+      bg-gradient-to-r 
+      from-[#632EE3]
+       to-[#9F62F2]"><img className='w-[30px] h-[30px]' src="/src/assets/logo.png" alt="" />HERO.IO</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
