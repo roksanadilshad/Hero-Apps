@@ -1,10 +1,11 @@
 import React from 'react';
+import { FaGithub } from 'react-icons/fa';
 import { NavLink } from 'react-router';
 
 const Header = () => {
     return (
         <div>
-            <div className="navbar bg-base-100 shadow-sm">
+            <div className="navbar bg-base-100 shadow-sm mb-20">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -13,28 +14,22 @@ const Header = () => {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Item 1</a></li>
-        <li>
-          <a>Parent</a>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </li>
-        <li><a>Item 3</a></li>
+         <NavLink to="/" className='font-semibold text-[16px]/[152%] mr-8'>Home</NavLink>
+     <NavLink to="/apps" className='font-semibold text-[16px]/[152%] mr-8'>Apps</NavLink>
+     <NavLink to="/installation" className='font-semibold text-[16px]/[152%] mr-8'>Installation</NavLink>
       </ul>
     </div>
     <a className="btn btn-ghost font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#632EE3] to-[#9F62F2]"><img className='w-[30px] h-[30px]' src="/src/assets/logo.png" alt="" />HERO.IO</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-     <NavLink to="/">Home</NavLink>
-     <NavLink to="/">Apps</NavLink>
-     <NavLink to="/">Installation</NavLink>
+     <NavLink to="/" className='font-semibold text-[16px]/[152%] mr-8'>Home</NavLink>
+     <NavLink to="/apps" className='font-semibold text-[16px]/[152%] mr-8'>Apps</NavLink>
+     <NavLink to="/installation" className='font-semibold text-[16px]/[152%] mr-8'>Installation</NavLink>
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+    <a href='https://github.com/roksanadilshad' className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white"><FaGithub/> Contribute</a>
   </div>
 </div>
         </div>
