@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { MdDownload } from 'react-icons/md';
 import { useLoaderData, useParams } from 'react-router';
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-import { updateList } from '../Utility/localStorage';
+import { loadDownload, loadInstall, updateInstall, updateList } from '../Utility/localStorage';
 // import useApps from '../hooks/useApps';
 
 const AppDetails = () => {
@@ -13,19 +13,28 @@ const AppDetails = () => {
     //console.log(id);
     const appId = parseInt(id);
     const detaile = useLoaderData();
+     const [installed, setInstalled] = useState(true);
     
     const singleApp = detaile.find(app => app.id === appId)
     //console.log(singleApp);
-
-       const {image, title, companyName, description, size, reviews, ratingAvg, downloads, ratings} = singleApp || {};
-
-       const [Installed, setInstalled] = useState(false)
-         
+        
+      useEffect(() =>{
+         const installedApps = loadInstall();
+         const parseData = installedApps.map(id => parseInt(id))
+          const faltu = parseData.includes(singleApp.id)
+         setInstalled(faltu)
+}, [appId])
+      
        const handleInstall = () =>{
+        updateInstall(singleApp)
         updateList(singleApp);
         setInstalled(true);
        }
-    
+
+       const {image, title, companyName, description, size, reviews, ratingAvg, downloads, ratings} = singleApp || {};
+
+      
+      
     return (
         <div>
            <div className="card card-side bg-[#F5F5F5] shadow-sm w-11/12 mx-auto px-10">
@@ -65,22 +74,16 @@ const AppDetails = () => {
         
     </div>
     <div className="card-actions">
-      <button onClick={handleInstall} className="btn text-white btn-responsive bg-[#00D390]">{ Installed ? 'Installed' : `Install Now (${size}) MB`}</button>
+      <button onClick={handleInstall} className="btn text-white btn-responsive bg-[#00D390]">{ installed ? 'Installed' : `Install Now (${size}) MB`}</button>
     </div>
   </div>
 </div>
-{/* "ratings": [
-      { "name": "1 star", "count": 550000 },
-      { "name": "2 star", "count": 800000 },
-      { "name": "3 star", "count": 1800000 },
-      { "name": "4 star", "count": 5000000 },
-      { "name": "5 star", "count": 30000000 } */}
-{/* chat */}
+
 <div className='w-full md:w-11/12 mx-auto mt-10'>
   
 
      <h3 className='font-semibold text-2xl/[32px] py-2'><b>Ratings</b></h3>
-    <div className='lg:w-full w-[50%] h-[500px] border-[1px] border-[#77777752] rounded-xl'>
+    <div className='lg:w-full w-[100%] h-[500px] border-[1px] border-[#77777752] rounded-xl'>
       <ResponsiveContainer>
       <BarChart
         
@@ -109,7 +112,7 @@ const AppDetails = () => {
     </div>
   
     
-<p className='pt-10'><b>Description: </b>{description}</p>
+<p className='pt-10  text-[#777777d3] pb-4 text-xl/[32px]'><b>Description: </b> {description}</p>
 </div>
         </div>
     );

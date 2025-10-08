@@ -1,5 +1,7 @@
 //import { useEffect, useState } from 'react';
 import App from '../App/App';
+import Skeleton from '../Skeleton/Skeleton';
+import useApps from '../hooks/useApps';
 //import useApps from '../hooks/useApps';
 
 
@@ -20,19 +22,24 @@ const Apps = ({searchProducts = [], apps = []}) => {
     
 
 // console.log(searchProducts);
+  
+const {loading} = useApps();
 
+const displayApps = searchProducts.length > 0 ? searchProducts : apps;
 
     return (
         <div>
-            <div className='grid grid-cols-4 gap-5 w-11/12 mx-auto'>
+            {loading ? (
+                    <Skeleton count={16}></Skeleton>
+                ):( <div className='grid grid-cols-4 gap-5 w-11/12 mx-auto pb-40'>
+            {  
+                    displayApps.map(app=> <App app={app} key={app.id}></App>)
+            }
+            </div>)}
+           
 
-           {
-            searchProducts.map(app=> <App app={app} key={app.id}></App>)
-           }
-           {
-            apps.map(app=> <App app={app} key={app.id}></App>)
-           }
-            </div>
+         
+           
         </div>
     );
 };

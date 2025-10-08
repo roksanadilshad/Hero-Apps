@@ -10,6 +10,30 @@ export const loadDownload =() =>{
 
     }
 }
+
+// install
+export const loadInstall =() =>{
+    try{
+        const data = localStorage.getItem('installed')
+        return data ? JSON.parse(data) : []
+    }
+    catch(err){
+        console.log(err);
+        return []
+
+    }
+}
+// Install save
+export const updateInstall =(app) =>{
+    const installed = loadInstall();
+    if(!installed.includes(app.id)){
+        installed.push(app.id);
+        localStorage.setItem('installed', JSON.stringify(installed));
+    }
+    
+}
+
+
 // save
 export const updateList = app =>{
     const appList = loadDownload()

@@ -1,27 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import App from '../App/App';
 import Apps from '../Apps/Apps';
+import useApps from '../hooks/useApps';
+import ErrorPage from '../Route/ErrorPage/ErrorPage';
+import ErrorApp from '../Route/ErrorPage/ErrorApp';
 //import useApps from '../hooks/useApps';
 
 const AppsWithTitle = () => {
-    const [apps, setApps] = useState([]);
+    const {apps} = useApps();
+    console.log(apps);
+    
      const [search, setSearch] = useState('');
-        //  const {apps} = useApps()
-        //  console.log(apps);
-         
-     useEffect(() => {
-             fetch('/app.json')
-             .then(res => res.json())
-             .then(data => setApps(data))
-             .catch(err => console.error(err));
-             
-         }, [])
     
         const trem = search.trim().toLocaleLowerCase();
         const searchProducts =
             trem ? apps.filter(app => app.title.toLocaleLowerCase().includes(trem)) : apps;
         
-    
+    //if(!trem.length) return <ErrorApp></ErrorApp>
     // console.log(searchProducts);
     
     

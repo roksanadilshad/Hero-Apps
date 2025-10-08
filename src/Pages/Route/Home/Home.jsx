@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Apps from '../../Apps/Apps';
 //import { useLoaderData } from 'react-router';
 import useApps from '../../hooks/useApps';
+import Skeleton from '../../Skeleton/Skeleton';
 
 const Home = () => {
   const {apps, loading} = useApps();
@@ -11,14 +12,12 @@ const Home = () => {
 
     
     //console.log(apps);
-    if(loading){
-      return ('Loading.....')
-    } 
+    
     
     
     const displayApps = showAll ? apps : apps.slice(0, 8);
     return (
-        <div className='text-center flex justify-center items-center flex-col'>
+      <div className='text-center flex justify-center items-center flex-col'>
            <h1 className='font-bold text-7xl/[84px]'>We Build <br />
          <span className='font-bold 
     bg-clip-text
@@ -64,7 +63,15 @@ const Home = () => {
        <div>
              <h2 className='font-bold text-5xl text-[#001931]'>Trending Apps</h2>
               <p className='text-xl/[32px] text-[#627382] m-4'>Explore All Trending Apps on the Market developed by us</p>
-              <Apps apps={displayApps || []}></Apps>
+
+              {
+                loading? (
+                  <Skeleton></Skeleton>
+                ):(
+
+                  <Apps apps={displayApps || []}></Apps>
+                )
+              }
              
              {
               apps.length > 8 && (
