@@ -1,12 +1,18 @@
 import React from 'react';
-import { useLoaderData } from 'react-router';
 import Apps from '../../Apps/Apps';
+import useApps from '../../hooks/useApps';
+import App from '../../App/App';
+import { useLoaderData } from 'react-router';
 
 const Home = () => {
-    const apps = useLoaderData();
+      const apps = useLoaderData();
     //console.log(apps);
+
+    // const apps = useApps();
+    console.log(apps);
     
-    const diusplayApps = apps.slice(0, 6)
+    
+    const displayApps = apps.slice(0, 6);
     return (
         <div className='text-center flex justify-center items-center flex-col'>
            <h1 className='font-bold text-7xl/[84px]'>We Build <br />
@@ -54,7 +60,8 @@ const Home = () => {
        <div>
              <h2 className='font-bold text-5xl text-[#001931]'>Trending Apps</h2>
               <p className='text-xl/[32px] text-[#627382] m-4'>Explore All Trending Apps on the Market developed by us</p>
-              <Apps apps={diusplayApps}></Apps>
+              <Apps apps={displayApps}></Apps>
+              {/* <App apps={displayApps}></App> */}
       </div>
        </div>
     );
