@@ -1,7 +1,5 @@
 import React from 'react';
 import Apps from '../../Apps/Apps';
-import useApps from '../../hooks/useApps';
-import App from '../../App/App';
 import { useLoaderData } from 'react-router';
 
 const Home = () => {
@@ -9,7 +7,7 @@ const Home = () => {
     //console.log(apps);
 
     // const apps = useApps();
-    console.log(apps);
+    //console.log(apps);
     
     
     const displayApps = apps.slice(0, 6);
