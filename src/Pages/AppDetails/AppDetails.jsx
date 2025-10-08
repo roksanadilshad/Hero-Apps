@@ -2,9 +2,13 @@ import React from 'react';
 import { MdDownload } from 'react-icons/md';
 import { useLoaderData, useParams } from 'react-router';
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import { updateList } from '../Utility/localStorage';
+// import useApps from '../hooks/useApps';
 
 const AppDetails = () => {
-    //const {apps, loading} = useApps();
+    // const {apps, loading} = useApps();
+    // console.log(apps);
+    
     const {id} = useParams();
     //console.log(id);
     const appId = parseInt(id);
@@ -12,9 +16,8 @@ const AppDetails = () => {
     
     const singleApp = detaile.find(app => app.id === appId)
     //console.log(singleApp);
-    
 
-       const {image, title, companyName, description, size, reviews, ratingAvg, downloads, ratings} = singleApp;
+       const {image, title, companyName, description, size, reviews, ratingAvg, downloads, ratings} = singleApp || {};
 
        
 
@@ -58,7 +61,7 @@ const AppDetails = () => {
         
     </div>
     <div className="card-actions">
-      <button className="btn text-white btn-responsive bg-[#00D390]">Install Now ({size}) MB</button>
+      <button onClick={() => updateList(singleApp)} className="btn text-white btn-responsive bg-[#00D390]">Install Now ({size}) MB</button>
     </div>
   </div>
 </div>
@@ -72,7 +75,7 @@ const AppDetails = () => {
 <div className='w-full md:w-11/12 mx-auto mt-10'>
   
 
-     <h3 className='font-semibold text-2xl/[32px]'><b>Ratings</b></h3>
+     <h3 className='font-semibold text-2xl/[32px] py-2'><b>Ratings</b></h3>
     <div className='lg:w-full w-[50%] h-[500px] border-[1px] border-[#77777752] rounded-xl'>
       <ResponsiveContainer>
       <BarChart
@@ -102,7 +105,7 @@ const AppDetails = () => {
     </div>
   
     
-<p className=''><b>Description</b>{description}</p>
+<p className='pt-10'><b>Description: </b>{description}</p>
 </div>
         </div>
     );

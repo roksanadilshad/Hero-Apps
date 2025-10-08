@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import App from '../App/App';
 import Apps from '../Apps/Apps';
+//import useApps from '../hooks/useApps';
 
 const AppsWithTitle = () => {
     const [apps, setApps] = useState([]);
      const [search, setSearch] = useState('');
-
+        //  const {apps} = useApps()
+        //  console.log(apps);
+         
      useEffect(() => {
              fetch('/app.json')
              .then(res => res.json())
@@ -30,10 +33,13 @@ const AppsWithTitle = () => {
                    <div className='flex justify-between pb-4'>
 
                 <p><b>({searchProducts.length}) Apps Found</b></p>
-                <input onChange={e => setSearch(e.target.value)} value={search} type="search" name="search" placeholder='🔍 Search Apps' className='p-2 rounded-xl border-[1px] border-[#7777776c]' />
+              
+                <input 
+                onChange={e => setSearch(e.target.value)} value={search} type="search" name="search" placeholder='🔍 Search Apps' className='p-2 rounded-xl border-[1px] border-[#7777776c]' />
+               
                    </div>
             </div>
-            <Apps></Apps>
+            <Apps searchProducts={searchProducts}></Apps>
         </div>
     );
 };

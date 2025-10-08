@@ -16,7 +16,7 @@ const Header = () => {
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
          <NavLink to="/" className='font-semibold text-[16px]/[152%] mr-8'>Home</NavLink>
      <NavLink to="/appsWithTitle" className='font-semibold text-[16px]/[152%] mr-8'>Apps</NavLink>
-     <NavLink to="/installation" className='font-semibold text-[16px]/[152%] mr-8'>Installation</NavLink>
+     <NavLink to="/appList" className='font-semibold text-[16px]/[152%] mr-8'>Installation</NavLink>
       </ul>
     </div>
     <a href='/' className="btn btn-ghost 
@@ -30,8 +30,8 @@ const Header = () => {
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
      <NavLink to="/" className='font-semibold text-[16px]/[152%] mr-8'>Home</NavLink>
-     <NavLink to="/apps" className='font-semibold text-[16px]/[152%] mr-8'>Apps</NavLink>
-     <NavLink to="/installation" className='font-semibold text-[16px]/[152%] mr-8'>Installation</NavLink>
+     <NavLink to="/appsWithTitle" className='font-semibold text-[16px]/[152%] mr-8'>Apps</NavLink>
+     <NavLink to="/appList" className='font-semibold text-[16px]/[152%] mr-8'>Installation</NavLink>
     </ul>
   </div>
   <div className="navbar-end">

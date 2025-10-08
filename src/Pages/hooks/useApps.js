@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
 const useApps = () =>{
     const [apps, setApps] = useState([]);
     const [loading, setLoading] = useState(true);
-    const[ error, setError] = useState(null);
+    //const[ error, setError] = useState(null);
 
     // useEffect(() => {
     //     setLoading(true)
@@ -16,16 +16,14 @@ const useApps = () =>{
     // }, [])
 
      useEffect(() => {
-        setLoading(true)
+        // setLoading(true)
             fetch('/app.json')
             .then(res => res.json())
             .then(data => setApps(data))
-            .catch(err => setError(err));
-            
+            .finally(() => setLoading(false))
         }, [])
-    console.log(apps);
     
-    return {apps, loading, error}
+    return {apps, loading}
 }
 
 export default useApps

@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import App from '../App/App';
+//import useApps from '../hooks/useApps';
 
 
-const Apps = () => {
+const Apps = ({searchProducts = []}) => {
     const [apps, setApps] = useState([]);
    
     useEffect(() => {
@@ -13,6 +14,8 @@ const Apps = () => {
         
     }, [])
 
+     //const {apps} = useApps();
+     //console.log(apps);
 
     
 

@@ -5,6 +5,7 @@ import Home from "./Home/Home";
 import Apps from "../Apps/Apps";
 import AppsWithTitle from "../AppsWithTitle/AppsWithTitle";
 import AppDetails from "../AppDetails/AppDetails";
+import AppList from "../AppList/AppList";
 
 
 const router = createBrowserRouter([
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
           path:'/appDetails/:id',
           loader:() => fetch('../../app.json'),
           Component:AppDetails
+        },
+        {
+         path:'/appList',
+         Component: AppList
         },
         {
             path: '*',

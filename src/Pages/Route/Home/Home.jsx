@@ -1,13 +1,17 @@
 import React from 'react';
 import Apps from '../../Apps/Apps';
-import { useLoaderData } from 'react-router';
+//import { useLoaderData } from 'react-router';
+import useApps from '../../hooks/useApps';
 
 const Home = () => {
-      const apps = useLoaderData();
+      // const apps = useLoaderData();
     //console.log(apps);
 
-    // const apps = useApps();
+    const {apps, loading} = useApps();
     //console.log(apps);
+    if(loading){
+      return ('Loading.....')
+    } 
     
     
     const displayApps = apps.slice(0, 6);
@@ -58,7 +62,7 @@ const Home = () => {
        <div>
              <h2 className='font-bold text-5xl text-[#001931]'>Trending Apps</h2>
               <p className='text-xl/[32px] text-[#627382] m-4'>Explore All Trending Apps on the Market developed by us</p>
-              <Apps apps={displayApps}></Apps>
+              <Apps apps={displayApps || []}></Apps>
               {/* <App apps={displayApps}></App> */}
       </div>
        </div>
