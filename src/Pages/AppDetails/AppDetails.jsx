@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { MdDownload } from 'react-icons/md';
 import { useLoaderData, useParams } from 'react-router';
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-import { loadDownload, loadInstall, updateInstall, updateList } from '../Utility/localStorage';
+import { loadInstall, updateInstall, updateList } from '../Utility/localStorage';
+
 // import useApps from '../hooks/useApps';
 
 const AppDetails = () => {

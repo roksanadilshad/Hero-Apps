@@ -1,3 +1,5 @@
+import Swal from "sweetalert2";
+
 // get
 export const loadDownload =() =>{
     try{
@@ -40,10 +42,22 @@ export const updateList = app =>{
     try{
         const isDuplicate = appList.some(p => p.id === app.id)
         if(isDuplicate){
-            return alert('Already added..');
+                Swal.fire({
+  icon: "error",
+  title: "Oops...",
+  text: "This App is already in your list!",
+  footer: '<a href="#">Why do I have this issue?</a>'
+  });
+  return;
+            
         }
         const updateApplist = [...appList, app]
         localStorage.setItem('appList', JSON.stringify(updateApplist))
+        Swal.fire({
+      icon: 'success',
+      title: 'Added!',
+      text: `${app.title} has been added successfully.`,
+    });
     }
     catch(err){
         console.log(err);
