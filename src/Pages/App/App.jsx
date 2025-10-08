@@ -11,7 +11,7 @@ const App = ({app}) => {
     return (
         <div>
             <Link to={`/appDetails/${id}`}>
-            <div className='flex justify-center items-center flex-col p-4 rounded-xl bg-white'>
+            <div className='flex justify-center items-center flex-col p-4 rounded-xl bg-white shadow-sm'>
 
             <img src={image} alt="" className='w-[50%]'/>
             <h3 className='font-medium text-xl pt-4'>{title}</h3>

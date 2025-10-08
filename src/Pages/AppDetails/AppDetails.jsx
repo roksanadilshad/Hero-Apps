@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MdDownload } from 'react-icons/md';
 import { useLoaderData, useParams } from 'react-router';
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
@@ -19,8 +19,12 @@ const AppDetails = () => {
 
        const {image, title, companyName, description, size, reviews, ratingAvg, downloads, ratings} = singleApp || {};
 
-       
-
+       const [Installed, setInstalled] = useState(false)
+         
+       const handleInstall = () =>{
+        updateList(singleApp);
+        setInstalled(true);
+       }
     
     return (
         <div>
@@ -61,7 +65,7 @@ const AppDetails = () => {
         
     </div>
     <div className="card-actions">
-      <button onClick={() => updateList(singleApp)} className="btn text-white btn-responsive bg-[#00D390]">Install Now ({size}) MB</button>
+      <button onClick={handleInstall} className="btn text-white btn-responsive bg-[#00D390]">{ Installed ? 'Installed' : `Install Now (${size}) MB`}</button>
     </div>
   </div>
 </div>

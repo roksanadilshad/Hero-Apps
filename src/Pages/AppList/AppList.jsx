@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { loadDownload, removeFromList } from '../Utility/localStorage';
+import { removeFromList } from '../Utility/localStorage';
 import Installed from '../Installed/Installed';
 import { MdDownload } from 'react-icons/md';
 import { FaStar } from 'react-icons/fa';
@@ -44,13 +44,13 @@ const AppList = () => {
         }
     })();
 
-    console.log(sortedItem);
+    //console.log(sortedItem);
     
 
     
     return (
         <div>
-           <div className='w-11/12 mx-auto text-center pb-40'>
+           <div className='w-11/12 mx-auto text-center pb-40 min-h-120'>
              <h2 className='font-bold text-5xl'>Your Installed Apps</h2>
             <p className='text-xl/[32px] text-[#627382] m-2 pb-20'>Explore All Trending Apps on the Market developed by us</p>
             <div className='flex justify-between items-center'>
@@ -61,12 +61,12 @@ const AppList = () => {
                <option value='none'>Sort by size</option>
                <option value='highValue' className='flex justify-around items-center p-1.5 text-[12px] rounded-xl text-[#00D390]'><MdDownload/> High-&gt;Low</option>
                <option value='lowValue' className='flex justify-around items-center p-1.5 text-[12px] rounded-xl text-[#00D390]'><MdDownload/>Low-&gt;High</option>
-               <option value='highRate' className='flex justify-around items-center text-[12px] rounded-xl text-[#FF8811]'><FaStar/> Low-&gt;High</option>
+               <option value='highRate' className='flex justify-around items-center text-[12px] rounded-xl text-[#FF8811]'><FaStar/>High-&gt;Low</option>
                <option value='lowRate' className='flex justify-around items-center text-[12px] rounded-xl text-[#FF8811]'><FaStar/> Low-&gt;High</option>
              </select>
             </div>
 
-            <div>
+            <div className='min-h-120'>
                 {
                     sortedItem.map(app => <Installed onRemove={handleRemove} app={app} key={app.id}></Installed>)
                 

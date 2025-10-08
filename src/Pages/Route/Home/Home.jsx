@@ -1,20 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Apps from '../../Apps/Apps';
 //import { useLoaderData } from 'react-router';
 import useApps from '../../hooks/useApps';
 
 const Home = () => {
+  const {apps, loading} = useApps();
+  const [showAll, setShowAll] = useState(false);
       // const apps = useLoaderData();
     //console.log(apps);
 
-    const {apps, loading} = useApps();
+    
     //console.log(apps);
     if(loading){
       return ('Loading.....')
     } 
     
     
-    const displayApps = apps.slice(0, 6);
+    const displayApps = showAll ? apps : apps.slice(0, 8);
     return (
         <div className='text-center flex justify-center items-center flex-col'>
            <h1 className='font-bold text-7xl/[84px]'>We Build <br />
@@ -63,7 +65,15 @@ const Home = () => {
              <h2 className='font-bold text-5xl text-[#001931]'>Trending Apps</h2>
               <p className='text-xl/[32px] text-[#627382] m-4'>Explore All Trending Apps on the Market developed by us</p>
               <Apps apps={displayApps || []}></Apps>
-              {/* <App apps={displayApps}></App> */}
+             
+             {
+              apps.length > 8 && (
+
+                <button className='btn bg-gradient-to-r 
+         from-[#632EE3]
+          to-[#9F62F2] text-white m-20' onClick={() => setShowAll(!showAll)}>{showAll ? 'ShowLess' : "Show All"}</button>
+              )
+             }
       </div>
        </div>
     );
