@@ -35,12 +35,6 @@ const AppList = () => {
         else if(sort === 'lowValue'){
              return[...appList].sort((a,b)=> a.downloads - b.downloads);   
         }
-        // else if(sort === 'highRate'){
-        //      return[...appList].sort((a,b)=> b.ratingAvg - a.ratingAvg);   
-        // }
-        // else if(sort === 'lowRate'){
-        //      return[...appList].sort((a,b)=> a.ratingAvg - b.ratingAvg);   
-        // }
         else{
             return appList
         }

@@ -70,6 +70,11 @@ export const removeFromList = id =>{
 
         const updateApplist = appList.filter(p => p.id !== id);
         localStorage.setItem('appList', JSON.stringify(updateApplist))
+         Swal.fire({
+      icon: 'success',
+      title: 'Uninstalled',
+      text: `Uninstalled successfully.`,
+    });
         }
     
     catch(err){

@@ -38,53 +38,53 @@ const AppDetails = () => {
       
     return (
         <div>
-           <div className="card card-side bg-[#F5F5F5] shadow-sm w-11/12 mx-auto px-10">
-  <figure className='w-[25%] pb-10'>
-    <img
+           <div className="lg:flex items-center lg:justify-between bg-[#F5F5F5] shadow-sm w-11/12 mx-auto flex-col lg:flex-row lg:px-10 lg:text-left text-center p-5">
+  
+    <img className='w-60 h-full lg:pb-10 mx-auto'
       src={image} />
-  </figure>
-  <div className="pl-10 w-[75%]">
-    <h2 className="card-title font-bold text-4xl py-4">{title}</h2>
-    <p className='text-xl/[32px] pb-4'>Devlopted by <span className='bg-clip-text
+  
+  <div className="lg:pl-10 lg:w-[75%] w-full mx-auto">
+    <h2 className=" font-bold lg:text-4xl text-2xl lg:py-4 py-2">{title}</h2>
+    <p className='lg:text-xl/[32px] text[14px] lg:pb-4 pb-3'>Devlopted by <span className='bg-clip-text
      text-transparent
       bg-gradient-to-r 
       from-[#632EE3]
        to-[#9F62F2]'>{companyName}</span></p>
     <hr className='text-[#d4d2d2]'/>
-    <div  className='flex justify-between w-[50%] items-start'>
+    <div  className='flex justify-between lg:w-[50%] items-start lg:mx-0 mx-auto'>
         
-            <div className=' py-10 flex flex-col gap-2 justify-center items-center'>
+            <div className=' lg:py-10 py-5 flex flex-col gap-2 justify-center items-center'>
     <img src="/src/assets/icon-downloads.png" alt="" />
-    <p className='text-[16px]/[24px] text-[#001931]'>Downloads</p>
-    <h2 className='font-extrabold pb-4 text-[40px]/[40px]'>{downloads}M</h2>
+    <p className='lg:text-[16px]/[24px] text-[12px] text-[#001931]'>Downloads</p>
+    <h2 className='font-extrabold lg:pb-4 pb-2 lg:text-[40px]/[40px] text-3xl/[20px]'>{downloads}M</h2>
   </div>
        
        
-            <div className='text-center py-10 flex flex-col gap-2 justify-center items-center'>
+            <div className='text-center lg:py-10 py-5 flex flex-col gap-2 justify-center items-center'>
     <img src="/src/assets/icon-ratings.png" alt="" />
-    <p className='text-[16px]/[24px] text-[#001931]'>Average Ratings</p>
-    <h2 className='font-extrabold pb-4 text-[40px]/[40px]'>{ratingAvg}M</h2>
+    <p className='lg:text-[16px]/[24px] text-[12px] text-[#001931]'>Average Ratings</p>
+    <h2 className='font-extrabold lg:pb-4 pb-2 lg:text-[40px]/[40px] text-3xl/[20px]'>{ratingAvg}M</h2>
   </div>
        
         
-            <div className='text-center py-10 flex flex-col gap-2 justify-center items-center'>
+            <div className='text-center lg:py-10 py-5 flex flex-col gap-2 justify-center items-center'>
     <img src="/src/assets/icon-review.png" alt="" />
-    <p className='text-[16px]/[24px] text-[#001931]'>Total Reviews</p>
-    <h2 className='font-extrabold pb-4 text-[40px]/[40px]'>{reviews}M</h2>
+    <p className='lg:text-[16px]/[24px] text-[12px] text-[#001931]'>Total Reviews</p>
+    <h2 className='font-extrabold lg:pb-4 pb-2 lg:text-[40px]/[40px] text-3xl/[20px]'>{reviews}M</h2>
   </div>
         
     </div>
-    <div className="card-actions">
+    <div className="">
       <button onClick={handleInstall} className="btn text-white btn-responsive bg-[#00D390]">{ installed ? 'Installed' : `Install Now (${size}) MB`}</button>
     </div>
   </div>
 </div>
 
-<div className='w-full md:w-11/12 mx-auto mt-10'>
+<div className='w-full md:w-11/12 mx-auto mt-3 lg:mt-10'>
   
 
-     <h3 className='font-semibold text-2xl/[32px] py-2'><b>Ratings</b></h3>
-    <div className='lg:w-full w-[100%] h-[500px] border-[1px] border-[#77777752] rounded-xl'>
+     <h3 className='font-semibold text-2xl/[32px] py-3 lg:text-left text-center'><b>Ratings</b></h3>
+    <div className='lg:w-full w-full h-[500px] border-[1px] border-[#77777752] rounded-xl'>
       <ResponsiveContainer>
       <BarChart
         
@@ -98,7 +98,7 @@ const AppDetails = () => {
         margin={{
           top: 20,
           right: 30,
-          left: 100,
+          left: 10,
           bottom: 20,
         }}
       >
@@ -113,7 +113,7 @@ const AppDetails = () => {
     </div>
   
     
-<p className='pt-10  text-[#777777d3] pb-4 text-xl/[32px]'><b>Description: </b> {description}</p>
+<p className='pt-10  text-[#777777d3] pb-4 text-xl/[32px]'><b className='text-black'>Description: </b> {description}</p>
 </div>
         </div>
     );

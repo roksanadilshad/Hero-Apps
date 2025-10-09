@@ -31,7 +31,7 @@ const displayApps = searchProducts.length > 0 ? searchProducts : apps;
         <div>
             {loading ? (
                     <Skeleton count={16}></Skeleton>
-                ):( <div className='grid grid-cols-4 gap-5 w-11/12 mx-auto pb-40'>
+                ):( <div className='grid lg:grid-cols-4 grid-cols-2 gap-5 w-11/12 mx-auto lg:pb-10 pt-4 md:pb-10'>
             {  
                     displayApps.map(app=> <App app={app} key={app.id}></App>)
             }
