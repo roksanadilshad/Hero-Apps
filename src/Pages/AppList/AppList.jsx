@@ -5,6 +5,8 @@ import { MdDownload } from 'react-icons/md';
 import { FaStar } from 'react-icons/fa';
 import useApps from '../hooks/useApps';
 import SkeletonList from '../Skeleton/SkeletonList';
+import { DNA } from 'react-loader-spinner';
+import DNAloder from '../Skeleton/DNAloder';
 
 const AppList = () => {
     const [appList, setAppList] = useState([]);
@@ -19,7 +21,6 @@ const AppList = () => {
     },[])
             
 
-    if(!appList.length) return <p>No Data Available</p>
 
    
 
@@ -61,16 +62,16 @@ const AppList = () => {
             </div>
 
             {
-                loading ? ( <SkeletonList count={sortedItem.length}></SkeletonList>) : (
+                loading ? ( <SkeletonList count={sortedItem.length}></SkeletonList>) : sortedItem.length > 0 ? (
                     <div className='min-h-120'>
                 {
                     sortedItem.map(app => <Installed onRemove={handleRemove} app={app} key={app.id}></Installed>)
-                
-                   
-                 }
+                }
                 
             </div>
-                )
+        ): (
+            <DNAloder></DNAloder>
+        )
             }
             
            </div>

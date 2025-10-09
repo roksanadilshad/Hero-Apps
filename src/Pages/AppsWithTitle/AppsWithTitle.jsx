@@ -36,7 +36,7 @@ const AppsWithTitle = () => {
                
                    </div>
             </div>
-            <div className='lg:pb-40 pb-5'>
+            <div className=' pb-5'>
 
              {
                      searchProducts.length > 0 ? (
