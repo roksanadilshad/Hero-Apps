@@ -3,14 +3,18 @@ import { CiStar } from 'react-icons/ci';
 import { FaStar } from 'react-icons/fa';
 import { MdDownload } from 'react-icons/md';
 import { Link } from 'react-router';
+import useApps from '../hooks/useApps';
+import Loader from '../Skeleton/Loader';
 
 const App = ({app}) => {
     //console.log(app);
+    const {loading} = useApps()
     const {image, title, downloads, ratingAvg, id} = app;
     
     return (
-        <div>
-            <Link to={`/appDetails/${id}`}>
+        <div>{
+            loading ? (<Loader></Loader>) : (
+                <Link to={`/appDetails/${id}`}>
             <div className='flex justify-center items-center flex-col p-4 rounded-xl bg-white shadow-sm h-full hover:shadow-2xl transition-[.5s] hover:-translate-y-1.5'>
 
             <img src={image} alt="" className='w-[50%]'/>
@@ -21,6 +25,10 @@ const App = ({app}) => {
             </div>
             </div>
             </Link>
+            )
+            
+            }
+            
         </div>
     );
 };
