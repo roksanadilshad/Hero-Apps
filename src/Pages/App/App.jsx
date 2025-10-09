@@ -21,7 +21,7 @@ const App = ({app}) => {
             <h3 className='font-semibold text-xl  pt-4'>{title}</h3>
             <div className='flex justify-between items-center pt-4  rounded-xl w-full'>
             <p className='flex justify-around items-center p-1.5 text-[12px] rounded-xl text-[#00D390] bg-[#F1F5E8]'> <MdDownload></MdDownload> {downloads}M</p>
-            <p className='flex justify-around items-center p-1.5 text-[12px] rounded-xl text-[#FF8811] bg-[#FFF0E1]'><FaStar></FaStar> {ratingAvg}</p>
+            <p className='flex justify-around items-center p-1.5 text-[12px] rounded-xl text-[#FF8811] bg-[#FFF0E1]'><FaStar className='mr-1'></FaStar> {ratingAvg}</p>
             </div>
             </div>
             </Link>

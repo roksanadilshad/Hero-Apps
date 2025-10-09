@@ -27,13 +27,15 @@ const Home = () => {
        
        <div className='flex justify-center items-center my-4'>
 
-<a className='btn flex justify-center items-center border-[1] border-[#77777725] m-4'  href="https://play.google.com/store/games?hl=en"><img src="/src/assets/play-store.png" alt="" />Googe Play</a>
-<a className='btn flex justify-center items-center border-[1] border-[#77777725] m-4' href="https://www.apple.com/app-store/"><img src="/src/assets/app-store.png" alt="" />App Store</a>
+<a className='btn flex justify-center items-center border-[1] border-[#77777725] m-4'  href="https://play.google.com/store/games?hl=en">
+<img src="https://i.ibb.co.com/qLYsvhWv/play-store.png" alt="" />Googe Play</a>
+<a className='btn flex justify-center items-center border-[1] border-[#77777725] m-4' href="https://www.apple.com/app-store/">
+<img src="https://i.ibb.co.com/67CqVVS1/app-store.png" alt="" />App Store</a>
 
 </div>
 
 <div>
-  <img src="/src/assets/hero.png" alt="" />
+  <img src="https://i.ibb.co.com/DfKh1PC5/hero.png" alt="" />
 </div>
 <div className=' bg-gradient-to-r 
       from-[#632EE3]

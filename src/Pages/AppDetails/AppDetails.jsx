@@ -43,21 +43,21 @@ const AppDetails = () => {
     <div  className='flex justify-between lg:w-[50%] items-start lg:mx-0 mx-auto'>
         
             <div className=' lg:py-10 py-5 flex flex-col gap-2 justify-center items-center'>
-    <img src="/src/assets/icon-downloads.png" alt="" />
+    <img src="https://i.ibb.co.com/yBbJJ852/icon-downloads.png" alt="" />
     <p className='lg:text-[16px]/[24px] text-[12px] text-[#001931]'>Downloads</p>
     <h2 className='font-extrabold lg:pb-4 pb-2 lg:text-[40px]/[40px] text-3xl/[20px]'>{downloads}M</h2>
   </div>
        
        
             <div className='text-center lg:py-10 py-5 flex flex-col gap-2 justify-center items-center'>
-    <img src="/src/assets/icon-ratings.png" alt="" />
+    <img src="https://i.ibb.co.com/VpBX140f/icon-ratings.png" alt="" />
     <p className='lg:text-[16px]/[24px] text-[12px] text-[#001931]'>Average Ratings</p>
     <h2 className='font-extrabold lg:pb-4 pb-2 lg:text-[40px]/[40px] text-3xl/[20px]'>{ratingAvg}M</h2>
   </div>
        
         
             <div className='text-center lg:py-10 py-5 flex flex-col gap-2 justify-center items-center'>
-    <img src="/src/assets/icon-review.png" alt="" />
+    <img src="https://i.ibb.co.com/Ps1VXNx7/icon-review.png" alt="" />
     <p className='lg:text-[16px]/[24px] text-[12px] text-[#001931]'>Total Reviews</p>
     <h2 className='font-extrabold lg:pb-4 pb-2 lg:text-[40px]/[40px] text-3xl/[20px]'>{reviews}M</h2>
   </div>
