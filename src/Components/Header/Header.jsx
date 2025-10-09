@@ -25,7 +25,7 @@ const Header = () => {
      text-transparent
       bg-gradient-to-r 
       from-[#632EE3]
-       to-[#9F62F2]"><img className='w-[30px] h-[30px]' src="/src/assets/logo.png" alt="" />HERO.IO</a>
+       to-[#9F62F2]"><img className='w-[30px] h-[30px]' src="https://i.ibb.co.com/35QQvNsK/logo.png" alt="" />HERO.IO</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">

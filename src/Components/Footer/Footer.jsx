@@ -11,7 +11,7 @@ const Footer = () => {
      text-transparent
       bg-gradient-to-r 
       from-[#e9e4f5]
-       to-[#9F62F2]"><img className='w-[30px] h-[30px]' src="/src/assets/logo.png" alt="" />HERO.IO</a>
+       to-[#9F62F2]"><img className='w-[30px] h-[30px]' src="https://i.ibb.co.com/35QQvNsK/logo.png" alt="" />HERO.IO</a>
     {/* <svg
       width="36"
       height="36"

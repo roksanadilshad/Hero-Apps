@@ -4,6 +4,7 @@ import Installed from '../Installed/Installed';
 import useApps from '../hooks/useApps';
 import SkeletonList from '../Skeleton/SkeletonList';
 import DNAloder from '../Skeleton/DNAloder';
+import Loader from '../Skeleton/Loader';
 
 const AppList = () => {
     const [appList, setAppList] = useState([]);
@@ -61,7 +62,7 @@ const AppList = () => {
             </div>
 
             {
-                loading ? ( <SkeletonList count={sortedItem.length}></SkeletonList>) : sortedItem.length > 0 ? (
+                loading ? ( <Loader></Loader>) : sortedItem.length > 0 ? (
                     <div className='min-h-120'>
                 {
                     sortedItem.map(app => <Installed onRemove={handleRemove} app={app} key={app.id}></Installed>)
