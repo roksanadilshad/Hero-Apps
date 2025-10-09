@@ -1,16 +1,29 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# App Name
+- "Hero App"
 
-Currently, two official plugins are available:
+# Website Description:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- The website is an App Marketplace where users can easily browse, search, and manage applications. It provides a seamless experience for installing and         uninstalling apps directly from the platform. Users can quickly find apps using the search functionality, and the system ensures smooth interactions with  engaging feedback through SweetAlert notifications for installation or uninstallation actions. The interface is clean, responsive, and modern, offering a  user-friendly experience with visually appealing components for app cards, lists, and dashboards. Additionally, the website includes interactive charts powered  by Recharts to show app statistics or user activity.
 
-## React Compiler
+# Technologies Used:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Vite – Fast and modern frontend build tool.
 
-## Expanding the ESLint configuration
+2. React – Core library for building the interactive UI.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. JavaScript (ES6+) – Programming language for frontend logic.
+
+4. React Router – For smooth navigation between pages.
+
+5. React Awesome – For loader elements that shows an animation while loading.
+
+6. Tailwind CSS – Utility-first CSS framework for responsive styling.
+
+7. DaisyUI – Tailwind-based UI component library for faster development.
+
+8. Recharts – For interactive charts and data visualization.
+
+9. SweetAlert – For elegant alert pop-ups during user actions.
+
+10. React icon - For icons that make user friendly buttons.

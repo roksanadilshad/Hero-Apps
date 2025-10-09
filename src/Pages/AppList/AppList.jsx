@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { removeFromList } from '../Utility/localStorage';
+import { loadDownload, removeFromList } from '../Utility/localStorage';
 import Installed from '../Installed/Installed';
-import { MdDownload } from 'react-icons/md';
-import { FaStar } from 'react-icons/fa';
 import useApps from '../hooks/useApps';
 import SkeletonList from '../Skeleton/SkeletonList';
-import { DNA } from 'react-loader-spinner';
 import DNAloder from '../Skeleton/DNAloder';
 
 const AppList = () => {
@@ -13,10 +10,12 @@ const AppList = () => {
     const [sort, setSort] = useState('none');
     const {loading} = useApps()
     useEffect(() =>{
-        const savedList = JSON.parse(localStorage.getItem('appList')) || [];
-        if(savedList){
-          setAppList(savedList)
-        } 
+         setAppList(loadDownload());
+        const handleStoreChange = () =>{
+            setAppList(loadDownload())
+        };
+        window.addEventListener('storage', handleStoreChange);
+        return() => window.removeEventListener('storage', handleStoreChange)
             
     },[])
             
@@ -25,8 +24,8 @@ const AppList = () => {
    
 
      const handleRemove = id =>{
-        setAppList(prev => prev.filter(app => app.id !== id))
-        removeFromList(id)
+         removeFromList(id)
+         setAppList(prev => prev.filter(app => app.id !== id))
      }
 
    const sortedItem = (() => {
@@ -55,7 +54,7 @@ const AppList = () => {
                 <select className="select w-40"
                 value={sort}
                 onChange={e => setSort(e.target.value)}>
-               <option value='none'>Sort by size</option>
+               <option value='none'>Sort by <small>Download count</small></option>
                <option value='highValue' className=' p-1.5 text-[12px] rounded-xl text-[#00D390]'>High-&gt;Low</option>
                <option value='lowValue' className=' p-1.5 text-[12px] rounded-xl text-[#00D390]'>Low-&gt;High</option>
              </select>

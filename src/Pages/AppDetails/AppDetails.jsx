@@ -1,40 +1,29 @@
 import React, { useEffect, useState } from 'react';
-import { MdDownload } from 'react-icons/md';
 import { useLoaderData, useParams } from 'react-router';
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-import { loadInstall, updateInstall, updateList } from '../Utility/localStorage';
+import { isInstalled, updateList } from '../Utility/localStorage';
 
 // import useApps from '../hooks/useApps';
 
 const AppDetails = () => {
-    // const {apps, loading} = useApps();
-    // console.log(apps);
-    
     const {id} = useParams();
     //console.log(id);
     const appId = parseInt(id);
     const detaile = useLoaderData();
-     const [installed, setInstalled] = useState(true);
+     const [installed, setInstalled] = useState(false);
     
     const singleApp = detaile.find(app => app.id === appId)
     //console.log(singleApp);
-        
       useEffect(() =>{
-         const installedApps = loadInstall();
-         const parseData = installedApps.map(id => parseInt(id))
-          const faltu = parseData.includes(singleApp.id)
-         setInstalled(faltu)
+          setInstalled(isInstalled(appId))
 }, [appId])
       
        const handleInstall = () =>{
-        updateInstall(singleApp)
-        updateList(singleApp);
-        setInstalled(true);
+          updateList(singleApp);
+          setInstalled(true);
        }
 
-       const {image, title, companyName, description, size, reviews, ratingAvg, downloads, ratings} = singleApp || {};
-
-      
+       const {image, title, companyName, description, size, reviews, ratingAvg, downloads, ratings} = singleApp || {};     
       
     return (
         <div>
@@ -75,7 +64,7 @@ const AppDetails = () => {
         
     </div>
     <div className="">
-      <button onClick={handleInstall} className="btn text-white btn-responsive bg-[#00D390]">{ installed ? 'Installed' : `Install Now (${size}) MB`}</button>
+      <button onClick={handleInstall}  className="btn text-white btn-responsive bg-[#00D390]">{ installed ? 'Installed' : `Install Now (${size}) MB`}</button>
     </div>
   </div>
 </div>

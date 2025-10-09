@@ -3,8 +3,9 @@ import Swal from "sweetalert2";
 // get
 export const loadDownload =() =>{
     try{
-        const data = localStorage.getItem('appList')
-        return data ? JSON.parse(data) : []
+        const data = localStorage.getItem('appList');
+        const parsed = data ? JSON.parse(data) : [];
+        return Array.isArray(parsed) ? parsed.filter(item => item && item.id) : []
     }
     catch(err){
         console.log(err);
@@ -12,31 +13,12 @@ export const loadDownload =() =>{
 
     }
 }
+export const isInstalled = (id) =>{
+    const currentList = loadDownload();
+    return currentList.some(item => item.id === id)
+};
 
-// install
-export const loadInstall =() =>{
-    try{
-        const data = localStorage.getItem('installed')
-        return data ? JSON.parse(data) : []
-    }
-    catch(err){
-        console.log(err);
-        return []
-
-    }
-}
-// Install save
-export const updateInstall =(app) =>{
-    const installed = loadInstall();
-    if(!installed.includes(app.id)){
-        installed.push(app.id);
-        localStorage.setItem('installed', JSON.stringify(installed));
-    }
-    
-}
-
-
-// save
+// save add to list
 export const updateList = app =>{
     const appList = loadDownload()
     try{
@@ -51,20 +33,23 @@ export const updateList = app =>{
   return;
             
         }
-        const updateApplist = [...appList, app]
-        localStorage.setItem('appList', JSON.stringify(updateApplist))
-        Swal.fire({
-      icon: 'success',
-      title: 'Added!',
-      text: `${app.title} has been added successfully.`,
-    });
+        
+
+            const updateApplist = [...appList, app]
+            localStorage.setItem('appList', JSON.stringify(updateApplist))
+            Swal.fire({
+          icon: 'success',
+          title: 'Installed',
+          text: `${app.title} has been installed successfully.`,
+        });
+        
     }
     catch(err){
         console.log(err);
     }
 }
 // delete
-export const removeFromList = id =>{
+export const removeFromList = (id) =>{
     const appList = loadDownload()
     try{
 

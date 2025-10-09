@@ -5,7 +5,7 @@ import useApps from '../hooks/useApps';
 //import useApps from '../hooks/useApps';
 
 
-const Apps = ({searchProducts = [], apps = []}) => {
+const Apps = ({ filteredApps = [], apps = []}) => {
     // const [apps, setApps] = useState([]);
    
     // useEffect(() => {
@@ -25,13 +25,13 @@ const Apps = ({searchProducts = [], apps = []}) => {
   
 const {loading} = useApps();
 
-const displayApps = searchProducts.length > 0 ? searchProducts : apps;
+const displayApps = filteredApps.length > 0 ? filteredApps : apps;
 
     return (
         <div>
             {loading ? (
                     <Skeleton count={16}></Skeleton>
-                ):( <div className='grid lg:grid-cols-4 grid-cols-2 gap-5 w-11/12 mx-auto lg:pb-10 pt-4 md:pb-10'>
+                ):( <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 w-11/12 mx-auto lg:pb-10 pt-4 md:pb-10'>
             {  
                     displayApps.map(app=> <App app={app} key={app.id}></App>)
             }
