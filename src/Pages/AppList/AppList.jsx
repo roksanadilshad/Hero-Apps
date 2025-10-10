@@ -52,10 +52,10 @@ const AppList = () => {
             <p className='lg:text-xl/[32px] text-[14px] text-[#627382] m-2 pb-5 lg:pb-20'>Explore All Trending Apps on the Market developed by us</p>
             <div className='flex justify-between items-center'>
                 <p><b>({sortedItem.length})Apps found</b></p>
-                <select className="select w-40"
+                <select className="select lg:w-40 w-50"
                 value={sort}
                 onChange={e => setSort(e.target.value)}>
-               <option value='none'>Sort by <small>Download count</small></option>
+               <option value='none' className='text-[#777777]'>Sort by <small>Download count</small></option>
                <option value='highValue' className=' p-1.5 text-[12px] rounded-xl text-[#00D390]'>High-&gt;Low</option>
                <option value='lowValue' className=' p-1.5 text-[12px] rounded-xl text-[#00D390]'>Low-&gt;High</option>
              </select>

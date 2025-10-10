@@ -73,7 +73,7 @@ const AppDetails = () => {
   
 
      <h3 className='font-semibold text-2xl/[32px] py-3 lg:text-left text-center'><b>Ratings</b></h3>
-    <div className='lg:w-full w-full h-[500px] border-[1px] border-[#77777752] rounded-xl'>
+    <div className='lg:w-full w-full mx-auto px-3 h-[500px] border-[1px] border-[#77777752] rounded-xl'>
       <ResponsiveContainer>
       <BarChart
         
@@ -102,7 +102,7 @@ const AppDetails = () => {
     </div>
   
     
-<p className='pt-10  text-[#777777d3] pb-4 text-xl/[32px]'><b className='text-black'>Description: </b> {description}</p>
+<p className='py-10  w-11/12 mx-auto text-[#777777d3] text-[16px]  lg:text-xl/[32px]'><b className='text-black'>Description: </b> {description}</p>
 </div>
         </div>
     );

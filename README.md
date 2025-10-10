@@ -1,6 +1,5 @@
 
-# App Name
-- "Hero App"
+# App Name: "Hero App"
 
 # Website Description:
 

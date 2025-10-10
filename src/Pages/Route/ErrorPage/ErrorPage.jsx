@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router';
 const ErrorPage = () => {
        const navigate = useNavigate()
     return (
-        <div className='flex justify-center items-center flex-col'>
+        <div className='flex justify-center items-center flex-col px-4'>
            <img src="https://i.ibb.co.com/Hcq9Thb/error-404.png" alt="" />
            <h2 className='font-semibold text-5xl/[60px]'>Oops, page not found!</h2>
            <p className='text-xl/[32px] text-[#627382] m-2'>The page you are looking for is not available.</p>
