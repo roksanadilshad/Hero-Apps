@@ -6,6 +6,7 @@ import Apps from "../Apps/Apps";
 import AppsWithTitle from "../AppsWithTitle/AppsWithTitle";
 import AppDetails from "../AppDetails/AppDetails";
 import AppList from "../AppList/AppList";
+import ErrorApp from "../Pages/Route/ErrorPage/ErrorApp";
 
 
 const router = createBrowserRouter([
@@ -33,7 +34,8 @@ const router = createBrowserRouter([
         {
           path:'/appDetails/:id',
           loader:() => fetch('../../app.json'),
-          Component:AppDetails
+          Component:AppDetails,
+          errorElement: <ErrorApp></ErrorApp>
         },
         {
          path:'/appList',

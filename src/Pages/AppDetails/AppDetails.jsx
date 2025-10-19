@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import { isInstalled, updateList } from '../Utility/localStorage';
+import ErrorApp from '../Route/ErrorPage/ErrorApp';
+import ErrorPage from '../Route/ErrorPage/ErrorPage';
+
 
 // import useApps from '../hooks/useApps';
 
@@ -23,9 +26,14 @@ const AppDetails = () => {
           setInstalled(true);
        }
 
-       const {image, title, companyName, description, size, reviews, ratingAvg, downloads, ratings} = singleApp || {};     
+       const {image, title, companyName, description, size, reviews, ratingAvg, downloads, ratings} = singleApp || {};    
+       
+       if(!singleApp){
+        return <ErrorPage></ErrorPage>
+       }
       
     return (
+
         <div>
            <div className="lg:flex items-center lg:justify-between bg-[#F5F5F5] shadow-sm w-11/12 mx-auto flex-col lg:flex-row lg:px-10 lg:text-left text-center p-5">
   
@@ -77,7 +85,7 @@ const AppDetails = () => {
       <ResponsiveContainer>
       <BarChart
         
-        data={[...ratings]
+        data={Object.values(ratings || {})
           .sort((a, b) => parseInt(b.name) - parseInt(a.name))
           .map(rating => ({
         name: rating.name,
