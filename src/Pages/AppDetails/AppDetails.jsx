@@ -2,14 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 import { isInstalled, updateList } from '../Utility/localStorage';
-import ErrorApp from '../Route/ErrorPage/ErrorApp';
+
 import ErrorPage from '../Route/ErrorPage/ErrorPage';
+
 
 
 // import useApps from '../hooks/useApps';
 
 const AppDetails = () => {
     const {id} = useParams();
+  
     //console.log(id);
     const appId = parseInt(id);
     const detaile = useLoaderData();
